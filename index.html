@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?education,learning') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .Login{
+            position: absolute;
+            right:20px;
+            top:10px;
+            color:white;
+            text-decoration: none;
+            font-size: medium;
+            font-weight: bold;
+
+        }
+
+        .Login:hover{
+            color:rgba(255, 255, 255, 0.87)
+        }
+
+        .Login:active{
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .dashboard h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .dashboard p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            padding: 20px;
+            width: 30%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 1;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 0 0 15px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            font-weight: 300;
+            margin: 0 0 20px;
+            opacity: 0.9;
+        }
+
+        .card button {
+            background: #007BFF;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .card button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff4500;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <a href="#" class="Login">Login</a>
+        <h1>Personalized Learning Dashboard</h1>
+        <p>Your tailored roadmap to success with high-quality resources curated just for you.</p>
+        <div class="cards">
+            <div class="card" style="background-image: url('career-goals-bg.jpg');">
+                <div class="card-content">
+                    <div class="card-icon">🎯</div>
+                    <h2>Career Goals</h2>
+                    <p>Set and track your career aspirations. Our AI will recommend the best learning resources for you.
+                    </p>
+                    <button>Explore Goals</button>
+                </div>
+            </div>
+
+
+            <div class="card" style="background-image: url('roadmap-bg.jpg');">
+                <div class="card-content">
+                    <div class="card-icon">🗺️</div>
+                    <h2>Learning Roadmap</h2>
+                    <p>Get a customized roadmap with curated courses, guides, and resources tailored to your
+                        preferences.</p>
+                    <button>View Roadmap</button>
+                </div>
+            </div>
+
+
+            <div class="card" style="background-image: url('progress-bg.jpg');">
+                <div class="card-content">
+                    <div class="card-icon">📊</div>
+                    <h2>Progress Tracker</h2>
+                    <p>Monitor your progress and stay motivated with real-time updates on your learning journey.</p>
+                    <button>Track Progress</button>
+                </div>
+            </div>
+            </main>
+        </div>
+        <button class="btn">Get Started</button>
+    </div>
+</body>
+
+</html>
